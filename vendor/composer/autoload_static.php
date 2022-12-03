@@ -548,7 +548,9 @@ class ComposerStaticInite1fd5e71e8ad7f9ece69e3306dcefeba
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Exports\\StudentsExportExcel' => __DIR__ . '/../..' . '/app/Exports/StudentsExportExcel.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\ExportImportStudentsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExportImportStudentsController.php',
         'App\\Http\\Controllers\\ShowUserDataController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShowUserDataController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -560,6 +562,7 @@ class ComposerStaticInite1fd5e71e8ad7f9ece69e3306dcefeba
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Imports\\StudentsImportExcel' => __DIR__ . '/../..' . '/app/Imports/StudentsImportExcel.php',
         'App\\Models\\Student' => __DIR__ . '/../..' . '/app/Models/Student.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
