@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->integer('identifier')->nullable();
+            $table->string('fullNameUser')->nullable();
             $table->string('loginUser')->nullable();
             $table->string('passUser')->nullable();
-            $table->string('fullNameUser')->nullable();
-            $table->string('userNickname')->nullable();
-            $table->string('passForUser')->nullable();
+
 
             $table->string('platformPw')->nullable();
             $table->string('databasePlatformNamePw')->nullable();
