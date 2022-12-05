@@ -17,3 +17,8 @@ Route::get('students/import/', [ExportImportStudentsController::class, 'importSt
 
 
 Route::post('/showUserData', [ShowUserDataController::class, 'showUserData'])->name('showUserData');
+
+
+Route::get('/login', function () {
+    return view ('login');
+});

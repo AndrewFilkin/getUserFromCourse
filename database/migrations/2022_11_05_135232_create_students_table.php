@@ -31,6 +31,9 @@ return new class extends Migration
             $table->string('databasePlatformUserIw')->nullable();
             $table->string('databasePlatformPassIw')->nullable();
 
+            $table->boolean('accessToWordpress')->default(0);
+            $table->boolean('accessToIspManager')->default(0);
+
             $table->timestamps();
 
         });
