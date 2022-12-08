@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowUserDataController;
 use App\Http\Controllers\ExportImportStudentsController;
+use App\Http\Controllers\LoginCuratorController;
 
 
 
@@ -19,6 +20,6 @@ Route::get('students/import/', [ExportImportStudentsController::class, 'importSt
 Route::post('/showUserData', [ShowUserDataController::class, 'showUserData'])->name('showUserData');
 
 
-Route::get('/login', function () {
-    return view ('login');
-});
+Route::get('/login', [LoginCuratorController::class, 'index'])->name('login.curator');
+Route::post('/login/checklogin', [LoginCuratorController::class, 'checkLogin'])->name('checkLogin');
+Route::get('/logout', [LoginCuratorController::class, 'logout'])->name('logout');

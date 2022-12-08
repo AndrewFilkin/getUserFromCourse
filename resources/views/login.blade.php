@@ -31,17 +31,41 @@
                             <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                             <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
-                            <div class="form-outline form-white mb-4">
-                                <input type="email" id="typeEmailX" class="form-control form-control-lg"/>
-                                <label class="form-label" for="typeEmailX">Email</label>
-                            </div>
+                            @if(isset(Auth::user()->email))
+                            <script>window.location="/";</script>
+                            @endif
 
-                            <div class="form-outline form-white mb-4">
-                                <input type="password" id="typePasswordX" class="form-control form-control-lg"/>
-                                <label class="form-label" for="typePasswordX">Password</label>
-                            </div>
+                            @if ($message = Session::get('error'))
+                                <div class="alert alert-danger alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">×</button>
+                                    <strong>{{ $message }}</strong>
+                                </div>
+                            @endif
 
-                            <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                            @if (count($errors) > 0)
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            <form method="post" action="{{ url('/login/checklogin') }}">
+                                @csrf
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" name="email" id="typeEmailX" class="form-control form-control-lg"/>
+                                    <label class="form-label" for="typeEmailX">Email</label>
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="password" name="password" id="typePasswordX" class="form-control form-control-lg"/>
+                                    <label class="form-label" for="typePasswordX">Password</label>
+                                </div>
+
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                            </form>
 
                             <div class="d-flex justify-content-center text-center mt-4 pt-1">
                                 <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
