@@ -63,7 +63,26 @@
                             </div>
                         </div>
                     </ul>
-                </div>
+                </div> &ensp;
+
+                <form class="form-check-inline" method="POST" action="{{ route('updateStudentStatus', $user->id) }}">
+                    @csrf
+                    @method('PUT')
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="checkbox_playground" id="inlineCheckbox1"
+                               value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Доступ к площадке</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="checkbox_manager" id="inlineCheckbox2"
+                               value="option2" checked>
+                        <label class="form-check-label" for="inlineCheckbox2">Доступ к ISP Manager</label>
+                    </div>
+                    <div class="input-group-append form-check-inline">
+                        <button type="submit" class="btn btn-primary">Подтвердить</button>
+                    </div>
+                </form>
+
                 <br>
                 <br>
             @endforeach

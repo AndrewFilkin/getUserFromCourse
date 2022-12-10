@@ -23,6 +23,8 @@ class StudentsImportExcel implements ToModel
             'databasePlatformNameIw' => $row[9],
             'databasePlatformUserIw' => $row[10],
             'databasePlatformPassIw' => $row[11],
+            'accessToWordpress' => $row[12],
+            'accessToIspManager' => $row[13],
         ]);
     }
 }

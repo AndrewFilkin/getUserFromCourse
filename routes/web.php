@@ -6,11 +6,8 @@ use App\Http\Controllers\ExportImportStudentsController;
 use App\Http\Controllers\LoginCuratorController;
 
 
-
-
-
 Route::get('/', function () {
-    return view ('searchUserDataForm');
+    return view('searchUserDataForm');
 });
 
 Route::get('students/export/', [ExportImportStudentsController::class, 'exportStudentsToExcel'])->name('export.students');
@@ -18,6 +15,7 @@ Route::get('students/import/', [ExportImportStudentsController::class, 'importSt
 
 
 Route::post('/showUserData', [ShowUserDataController::class, 'showUserData'])->name('showUserData');
+Route::put('update-student-status/{id}', [ShowUserDataController::class, 'updateStudentStatus'])->name('updateStudentStatus');
 
 
 Route::get('/login', [LoginCuratorController::class, 'index'])->name('login.curator');

@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class ShowUserDataController extends Controller
 {
-    public function showUserData(Request $request) {
+    public function showUserData(Request $request)
+    {
         $inputSearch = mb_strtolower($request->input('search'));
         $users = DB::table('students')
             ->select('*')
@@ -17,4 +18,11 @@ class ShowUserDataController extends Controller
 //        dd($users);
         return view('searchUserDataForm', compact('users'));
     }
+
+    public function updateStudentStatus(Request $request, $id)
+    {
+        dd($id);
+    }
+
+
 }
