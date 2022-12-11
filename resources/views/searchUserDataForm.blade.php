@@ -103,13 +103,21 @@
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" name="checkbox_playground"
                                id="checkbox_playground"
-                               value="1">
+                               value="1"
+                               @if($user->accessToWordpress == 1)
+                               checked
+                            @endif
+                        >
                         <label class="form-check-label" for="inlineCheckbox1" onchange="fun1()">Доступ к
                             площадке</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" name="checkbox_manager" id="checkbox_manager"
-                               value="1">
+                               value="1"
+                               @if($user->accessToIspManager == 1)
+                               checked
+                            @endif
+                        >
                         <label class="form-check-label" for="inlineCheckbox2">Доступ к ISP Manager</label>
                     </div>
                     <div class="input-group-append form-check-inline">

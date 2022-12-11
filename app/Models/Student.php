@@ -29,6 +29,8 @@ class Student extends Model
         'databasePlatformNameIw',
         'databasePlatformUserIw',
         'databasePlatformPassIw',
+        'accessToWordpress',
+        'accessToIspManager',
     ];
 
 }

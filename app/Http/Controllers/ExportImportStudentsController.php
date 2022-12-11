@@ -21,9 +21,9 @@ class ExportImportStudentsController extends Controller
 
     public function importStudentsToExcel()
     {
-
         if (Auth::user()) {
             Excel::import(new StudentsImportExcel, 'public/students.xlsx');
+
             return redirect('/')->with('success', 'All good!');
         } else {
             return redirect('/login');
