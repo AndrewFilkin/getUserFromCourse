@@ -1,6 +1,17 @@
 @extends('layouts.userShowData')
 
 @section('content')
+    {{--    <script>--}}
+    {{--        sendMessage();--}}
+    {{--    </script>--}}
+    <br>
+    @if ($message = Session::get('error'))
+        <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $message }}</strong>
+        </div>
+    @endif
+
     <br>
     @if(isset(Auth::user()->email))
         <div class="alert alert-success success-block">
@@ -10,6 +21,27 @@
         </div>
     @else
         <script>window.location = "/login";</script>
+    @endif
+    @if ($success = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $success }}</strong>
+        </div>
+    @endif
+    @if ($info = Session::get('emptyStudent'))
+        <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $info }}</strong>
+        </div>
+    @endif
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
     @endif
     <div class="container-md">
         <div class="container text-center">
@@ -69,13 +101,15 @@
                     @csrf
                     @method('PUT')
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="checkbox_playground" id="inlineCheckbox1"
-                               value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Доступ к площадке</label>
+                        <input class="form-check-input" type="checkbox" name="checkbox_playground"
+                               id="checkbox_playground"
+                               value="1">
+                        <label class="form-check-label" for="inlineCheckbox1" onchange="fun1()">Доступ к
+                            площадке</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="checkbox_manager" id="inlineCheckbox2"
-                               value="option2" checked>
+                        <input class="form-check-input" type="checkbox" name="checkbox_manager" id="checkbox_manager"
+                               value="1">
                         <label class="form-check-label" for="inlineCheckbox2">Доступ к ISP Manager</label>
                     </div>
                     <div class="input-group-append form-check-inline">
