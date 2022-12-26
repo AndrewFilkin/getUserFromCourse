@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowUserDataController;
 use App\Http\Controllers\ExportImportStudentsController;
 use App\Http\Controllers\LoginCuratorController;
+use App\Http\Controllers\Students\CreateStudentController;
 
 
 Route::get('/', function () {
@@ -21,3 +22,5 @@ Route::put('update-student-status/{id}', [ShowUserDataController::class, 'update
 Route::get('/login', [LoginCuratorController::class, 'index'])->name('login.curator');
 Route::post('/login/checklogin', [LoginCuratorController::class, 'checkLogin'])->name('checkLogin');
 Route::get('/logout', [LoginCuratorController::class, 'logout'])->name('logout');
+
+Route::get('/createAccount', [CreateStudentController::class, 'createAccount'])->name('createAccount');

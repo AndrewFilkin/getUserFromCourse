@@ -9,7 +9,6 @@ return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Exports\\StudentsExportExcel' => $baseDir . '/app/Exports/StudentsExportExcel.php',
-    'App\\Http\\Controllers\\Api\\UpdateStudentStatus' => $baseDir . '/app/Http/Controllers/Api/UpdateStudentStatus.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\ExportImportStudentsController' => $baseDir . '/app/Http/Controllers/ExportImportStudentsController.php',
     'App\\Http\\Controllers\\LoginCuratorController' => $baseDir . '/app/Http/Controllers/LoginCuratorController.php',

@@ -549,7 +549,6 @@ class ComposerStaticInite1fd5e71e8ad7f9ece69e3306dcefeba
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Exports\\StudentsExportExcel' => __DIR__ . '/../..' . '/app/Exports/StudentsExportExcel.php',
-        'App\\Http\\Controllers\\Api\\UpdateStudentStatus' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/UpdateStudentStatus.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ExportImportStudentsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExportImportStudentsController.php',
         'App\\Http\\Controllers\\LoginCuratorController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginCuratorController.php',
