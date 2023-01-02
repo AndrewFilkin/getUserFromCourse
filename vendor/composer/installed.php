@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '19f566282e3510a0d2f604acb3cb43bcccdc0f93',
+        'reference' => 'ee08e09523d21950ef03a0654604cd779868eda8',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -376,7 +376,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '19f566282e3510a0d2f604acb3cb43bcccdc0f93',
+            'reference' => 'ee08e09523d21950ef03a0654604cd779868eda8',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1012,6 +1012,15 @@
             'install_path' => __DIR__ . '/../spatie/laravel-ignition',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'stereoflo/ispmanager-php-api' => array(
+            'pretty_version' => 'v2.0',
+            'version' => '2.0.0.0',
+            'reference' => 'ed2612b4f2e098c432bd26399a7938331fc52445',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../stereoflo/ispmanager-php-api',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v6.1.7',

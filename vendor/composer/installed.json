@@ -5957,6 +5957,53 @@
             "install-path": "../spatie/laravel-ignition"
         },
         {
+            "name": "stereoflo/ispmanager-php-api",
+            "version": "v2.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StereoFlo/ispmanager-php-api.git",
+                "reference": "ed2612b4f2e098c432bd26399a7938331fc52445"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StereoFlo/ispmanager-php-api/zipball/ed2612b4f2e098c432bd26399a7938331fc52445",
+                "reference": "ed2612b4f2e098c432bd26399a7938331fc52445",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.3"
+            },
+            "time": "2019-05-12T03:20:57+00:00",
+            "type": "project",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "IspApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "StereoFlo",
+                    "email": "stereoflo@stereoflo.ru"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/StereoFlo/ispmanager-php-api/issues",
+                "source": "https://github.com/StereoFlo/ispmanager-php-api/tree/v2.0"
+            },
+            "install-path": "../stereoflo/ispmanager-php-api"
+        },
+        {
             "name": "symfony/console",
             "version": "v6.1.7",
             "version_normalized": "6.1.7.0",

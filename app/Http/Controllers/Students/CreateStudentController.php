@@ -17,6 +17,7 @@ class CreateStudentController extends Controller
     {
         $obj = new CreateStudentsThroughApi();
         $this->authKey = $obj->getKey();
+        $obj->createUserProfile($this->authKey, 'userqwer', 'Surname Name MiddleName', 'h57sP97RFe', 'pw925193.sprint.1t.ru');
 
     }
 }
